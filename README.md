@@ -71,8 +71,8 @@ Search Twitter using the official Twitter API (v2).
 ### ✅ Example command:
 
 
-python tweetsearch_api.py \
-  -q "elon, chatgpt, crypto" \
+python tweet-searcher.py \
+  -q "elon, A.I, crypto" \
   -m 30 \
   -n 10 \
   --sort recent \
@@ -111,15 +111,15 @@ Scrapes Twitter search results from mobile.twitter.com without using the API.
 
 ### ✅ Example command:
 
-```bash
-python tweetscraper.py \
-  -q "elon, chatgpt, crypto" \
+
+python tweet-searcher_No_API.py \
+  -q "elon, A.I, crypto" \
   -m 30 \
   -n 10 \
   --sort recent \
   -o results.txt \
   --proxyfile proxies.txt
-```
+
 
 ### ✅ Arguments
 
@@ -144,7 +144,7 @@ Your results file will look like:
 https://twitter.com/user/status/1234567890
 https://twitter.com/user/status/0987654321
 
-=== QUERY: chatgpt ===
+=== QUERY: A.I ===
 https://twitter.com/user/status/1122334455
 https://twitter.com/user/status/5544332211
 ```
@@ -158,7 +158,7 @@ https://twitter.com/user/status/5544332211
 ⚠️ The **API version** respects Twitter’s official rate limits (e.g. 450 requests/15 min).
 ⚠️ The **Non-API version** scrapes public search pages; Twitter may block IPs for excessive scraping.
 ⚠️ Free proxies are unreliable. For serious scraping, use paid/residential rotating proxies.
-⚠️ SOCKS5 support needs:
+⚠️ SOCKS5 support needs requests[socks] library installed
 
 
 ⚠️ The "how recent" filter is best-effort/logging only on the Non-API scraper.
